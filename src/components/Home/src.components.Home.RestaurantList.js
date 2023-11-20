@@ -6,7 +6,7 @@ import {
     ScrollView
 } from "react-native";
 
-import FoodCard_Small from "../common/FoodCard_Small";
+import FoodCard_Small from "../common/src.components.common.FoodCard_Small";
 
 const __restaurant_list = require("../../../models/restaurants_menu");
 

@@ -5,9 +5,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import HomeScreen from './src/screens/HomeScreen';
-import RestaurantScreen from './src/screens/RestaurantScreen';
-import ProfileScreen from "./src/screens/ProfileScreen";
+import HomeScreen from './src/screens/src.screens.HomeScreen';
+import RestaurantScreen from './src/screens/src.screens.RestaurantScreen';
+import ProfileScreen from "./src/screens/src.screens.ProfileScreen";
 
 const Bottom_Tab_Navigator = createBottomTabNavigator();
 const Stack_Navigator = createStackNavigator();

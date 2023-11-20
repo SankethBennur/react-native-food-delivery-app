@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import RestaurantList from '../components/Home/RestaurantList';
+import RestaurantList from '../components/Home/src.components.Home.RestaurantList';
 
 const HomeScreen = () => {
   return (
