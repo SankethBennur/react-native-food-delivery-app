@@ -6,6 +6,7 @@ function FoodCard({ image_url = "", title = "", description = "", price = 0.0 })
     return (
         <View style={ style.card }>
             <Image source={ { uri: image_url } } style={ style.card_image } />
+
             <Text style={ style.card_title } >{ title }</Text>
             <Text style={ style.card_description }>{ description }</Text>
             <Text style={ style.card_price }>{ price }</Text>
