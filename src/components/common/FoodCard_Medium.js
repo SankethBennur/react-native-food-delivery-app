@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from "react-native";
 
-function FoodCard({ image_url = "", title = "", description = "", price = 0.0 })
+function FoodCard_Medium({ image_url = "", title = "", description = "", price = 0.0 })
 {
     return (
         <View style={ style.card }>
@@ -47,4 +47,4 @@ const style = StyleSheet.create({
     },
 });
 
-export default FoodCard;
+export default FoodCard_Medium;

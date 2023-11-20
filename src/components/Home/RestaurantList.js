@@ -6,7 +6,7 @@ import {
     ScrollView
 } from "react-native";
 
-import FoodCard from "../common/FoodCard";
+import FoodCard_Small from "../common/FoodCard_Small";
 
 const __restaurant_list = require("../../../models/restaurants_menu");
 
@@ -23,8 +23,7 @@ const RestaurantList = () => {
                         >
                             { res_item.menu.map((food_item) => (
                                 <View key={ food_item.__id }>
-                                    {/* <Text>{ food_item.title }</Text> */ }
-                                    <FoodCard
+                                    <FoodCard_Small
                                         image_url={ food_item.image }
                                         title={ food_item.title }
                                         description={ food_item.description }
@@ -42,9 +41,9 @@ const RestaurantList = () => {
 
 const styles = StyleSheet.create({
     container: {
-        width: "100vw",
-        flex: 1,
-        padding: 16,
+        // width: "100vw",
+        // flex: 1,
+        // padding: 16,
     },
     restaurant_name: {
         fontSize: 20,
