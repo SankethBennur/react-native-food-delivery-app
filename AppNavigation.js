@@ -16,8 +16,16 @@ const HomeNavigation = () =>
 {
 	return (
 		<Stack_Navigator.Navigator>
-			<Stack_Navigator.Screen name="Home" component={HomeScreen} />
-			<Stack_Navigator.Screen name="Restaurant" component={RestaurantScreen} />
+			<Stack_Navigator.Screen
+				name="Home"
+				component={HomeScreen}
+				options = {{ headerShown: false }}		// must return object containing title
+			/>
+			<Stack_Navigator.Screen
+				name="Restaurant"
+				component={RestaurantScreen}
+				options = {{ headerShown: false }}
+			/>
 		</Stack_Navigator.Navigator>
 	);
 }
@@ -26,10 +34,18 @@ const ScreenTabNavigation = () =>
 {
 	return (
 		<Bottom_Tab_Navigator.Navigator>
-			<Bottom_Tab_Navigator.Screen name="Home" component={HomeNavigation} />
+			<Bottom_Tab_Navigator.Screen
+				name="Home"
+				component={HomeNavigation}
+				options = {({route}) => ({title: route.name})}
+			/>
 			{/* Careful!! HomeNavigation above! Not HomeScreen */}
 			
-			<Bottom_Tab_Navigator.Screen name="Profile" component={ProfileScreen} />
+			<Bottom_Tab_Navigator.Screen
+				name="Profile"
+				component={ProfileScreen}
+				options = {({route}) => ({title: route.name})}
+			/>
 		</Bottom_Tab_Navigator.Navigator>
 	);
 }

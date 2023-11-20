@@ -10,8 +10,8 @@ function FoodCard_Small(props = { image_url: "", title: "", description: "", pri
             <Text style={ style.card_title } >{ props.title }</Text>
             {/* <Text style={ style.card_description }>{ props.description }</Text> */}
             <Text style={ style.card_description }>{
-                (props.description.length > 120)
-                    ? props.description.slice(0,120) + " ...read more"
+                (props.description.length > 60)
+                    ? props.description.slice(0,60) + " ...read more"
                     : props.description
             }</Text>
             <Text style={ style.card_price }>{ props.price }</Text>
@@ -26,8 +26,8 @@ const style = StyleSheet.create({
         borderRadius: 8,
         padding: 16,
         margin: 8,
-        height: 300,
-        width: 300,
+        height: 160,
+        width: 200,
         elevation: 4,
     },
     card_image: {
