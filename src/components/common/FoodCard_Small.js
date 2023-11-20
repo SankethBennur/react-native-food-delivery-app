@@ -8,7 +8,12 @@ function FoodCard_Small(props = { image_url: "", title: "", description: "", pri
             <Image source={ { uri: props.image_url } } style={ style.card_image } />
 
             <Text style={ style.card_title } >{ props.title }</Text>
-            <Text style={ style.card_description }>{ props.description }</Text>
+            {/* <Text style={ style.card_description }>{ props.description }</Text> */}
+            <Text style={ style.card_description }>{
+                (props.description.length > 120)
+                    ? props.description.slice(0,120) + " ...read more"
+                    : props.description
+            }</Text>
             <Text style={ style.card_price }>{ props.price }</Text>
         </View>
     );
@@ -16,11 +21,13 @@ function FoodCard_Small(props = { image_url: "", title: "", description: "", pri
 
 const style = StyleSheet.create({
     card: {
+        flex: 1,
         backgroundColor: '#fff',
         borderRadius: 8,
         padding: 16,
         margin: 8,
-        width: 150,
+        height: 300,
+        width: 300,
         elevation: 4,
     },
     card_image: {
@@ -33,17 +40,21 @@ const style = StyleSheet.create({
     card_title: {
         fontSize: 18,
         fontWeight: "bold",
-        marginBottom: 4,
+        margin: 4,
     },
     card_description: {
         fontSize: 12,
         color: "#888",
         marginBottom: 4,
+        height: "25%",
     },
     card_price: {
+        flex: 1,
+        display: "flex",
         fontSize: 14,
         fontWeight: 'bold',
         color: '#3498db',
+        alignItems: "flex-end",
     },
 });
 

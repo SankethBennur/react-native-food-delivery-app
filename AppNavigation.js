@@ -28,6 +28,7 @@ const ScreenTabNavigation = () =>
 		<Bottom_Tab_Navigator.Navigator>
 			<Bottom_Tab_Navigator.Screen name="Home" component={HomeNavigation} />
 			{/* Careful!! HomeNavigation above! Not HomeScreen */}
+			
 			<Bottom_Tab_Navigator.Screen name="Profile" component={ProfileScreen} />
 		</Bottom_Tab_Navigator.Navigator>
 	);
@@ -36,16 +37,10 @@ const ScreenTabNavigation = () =>
 const AppNavigation = () =>
 {
 	return (
-		<NavigationContainer style={ styles.AppNavigation }> 
-			<ScreenTabNavigation style={ styles.AppNavigation } />
+		<NavigationContainer> 
+			<ScreenTabNavigation />
 		</NavigationContainer>
 	)
 }
-
-const styles = StyleSheet.create({
-	AppNavigation: {
-		width: "100%"
-	}
-});
 
 export default AppNavigation;

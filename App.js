@@ -10,7 +10,7 @@ export default function App()
 		<View style={ styles.container }>
 			<Text>My food delivery app!</Text>
 			<StatusBar style="auto" />
-			<AppNavigation style={ styles.AppNavigation } />
+			<AppNavigation />
 		</View>
 	);
 }
@@ -18,15 +18,10 @@ export default function App()
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		height: "100%",
-		width: "100vw",
 		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-	AppNavigation: {
-		flex: 1,
-		flexGrow: 1,
-		// width: "100vw",
+		height: "100%",
+		// width: "100%",
+		// alignItems: 'center',
+		// justifyContent: 'center',
 	}
 });

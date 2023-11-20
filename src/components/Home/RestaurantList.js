@@ -12,8 +12,8 @@ const __restaurant_list = require("../../../models/restaurants_menu");
 
 const RestaurantList = () => {
     return (
-        <View>
-            <ScrollView style={ styles.container }>
+        <View style={styles.container}>
+            <ScrollView style={ styles.scroll_view }>
                 { __restaurant_list.map((res_item) => (
                     <View key={ res_item.__id }>
                         <Text style={ styles.restaurant_name }>{ res_item.name }</Text>
@@ -41,9 +41,11 @@ const RestaurantList = () => {
 
 const styles = StyleSheet.create({
     container: {
-        // width: "100vw",
-        // flex: 1,
-        // padding: 16,
+        flex: 1,
+    },
+    scroll_view: {
+        flex: 1,
+        padding: 16,
     },
     restaurant_name: {
         fontSize: 20,
